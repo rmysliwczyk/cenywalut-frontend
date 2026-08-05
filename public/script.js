@@ -5,7 +5,7 @@ document.addEventListener("submit", async (event) => {
 	const waluta = formData.get('waluta')
 	const kwota = Number(formData.get('kwota'))
 
-	const response = await fetch(`http://cw-api.mysliwczykrafal.pl/currencies/${waluta}/`, {headers: {"Content-Type": "application/json"}})
+	const response = await fetch(`https://cw-api.mysliwczykrafal.pl/currencies/${waluta}/`, {headers: {"Content-Type": "application/json"}})
 	if (response.status != 200) {
 		console.error("Nie można pobrać danych")
 	} else {
