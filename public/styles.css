@@ -1,0 +1,72 @@
+:root {
+	--off-black: #3A3A3A;
+	--primary: #77CC88;
+}
+
+@font-face {
+	font-family: Poppins;
+	src: url("Poppins.ttf");
+}
+
+body {
+	font-family: Poppins, sans;
+	color: var(--off-black);
+}
+
+/* Form styling */
+input, button, select {
+	appearance: textfield;
+	text-align: center;
+	box-sizing: content-box;
+	border: none;
+	background-color: var(--primary);
+	min-width: 50px;
+	field-sizing: content;
+	height: 35px;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: rgb(from var(--primary) r g b / 0.6);
+}
+
+/* Links styling */
+a {
+	color: var(--primary);
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgb(from var(--primary) r g b / 0.6);
+}
+
+/* Table styling */
+table, th, td {
+	padding: 0px 15px;
+	border: solid 1px;
+	border-collapse: collapse;
+}
+
+/* Custom */
+span {
+	font-weight: 900;
+}
+
+h2 {
+	font-weight: 500;
+	font-size: 1.25em;
+}
+
+section, header, footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer {
+	position: fixed;
+	width: 100%;
+	bottom: 15px;
+	font-size: 0.5em;
+	text-align: center;
+}

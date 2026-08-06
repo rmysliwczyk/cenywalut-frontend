@@ -8,9 +8,7 @@
 		<meta name="description" content="Po ile Euro? Po ile Dolary? Sprawdź ceny walut na cenywalut.online" />
 		<meta name="keywords" content="kursy nbp, ceny walut, kursy walut, cena euro, cena dolary, eur do pln, pln do eur, eur do usd, usd do eur" />
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332662659818257" crossorigin="anonymous"></script>
-		<style>
-			body {text-align: center;}
-		</style>
+		<link href="styles.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<header>
@@ -25,6 +23,16 @@
 					<select id="waluta" name="waluta">
 						<option value="EUR">Euro</option>
 						<option value="USD">Dolar amerykański</option>
+						<option value="GBP">Funt szerling</option>
+						<option value="CAD">Dolar kanadyjski</option>
+						<option value="AUD">Dolar australijski</option>
+						<option value="CHF">Frank szwajcarski</option>
+						<option value="NOK">Korona norweska</option>
+						<option value="DKK">Korona duńska</option>
+						<option value="SEK">Korona szwedzka</option>
+						<option value="CZK">Korona czeska</option>
+						<option value="JPY">Jen (Japonia)</option>
+						<option value="HUF">Forint (Węgry)</option>
 					</select>
 					<label for="kwota">Kwota</label>
 					<input id="kwota" type="number" name="kwota" value=100>
@@ -33,14 +41,33 @@
 			</section>
 			<section id="form-output" style="display: none;">
 				<h2>Wynik kalkulacji: </h2>
-				<p id='kurs-ask'></p>
-				<p id='kurs-bid'></p>
+				<table>
+						<tr>
+							<th>
+								<p id='kurs-ask'></p>
+							</th>
+							<th>
+								<p id='kurs-bid'></p>
+							</th>
 
-				<p><span id='zakup'></span> kupisz za <span id="zakup-wynik"></span></p>
-				<p><span id='zakup-2'></span> kupisz za <span id="zakup-wynik-2"></span></p>
-
-				<p><span id='sprzedaz'></span> sprzedasz za <span id="sprzedaz-wynik"></span></p>
-				<p><span id='sprzedaz-2'></span> sprzedasz za <span id="sprzedaz-wynik-2"></span></p>
+						</tr>
+						<tr>
+							<td>
+								<p><span id='zakup'></span> kupisz za <span id="zakup-wynik"></span></p>
+							</td>
+							<td>
+								<p><span id='zakup-2'></span> kupisz za <span id="zakup-wynik-2"></span></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><span id='sprzedaz'></span> sprzedasz za <span id="sprzedaz-wynik"></span></p>
+							</td>
+							<td>
+								<p><span id='sprzedaz-2'></span> sprzedasz za <span id="sprzedaz-wynik-2"></span></p>
+							</td>
+						</tr>
+				</table>
 			</section>
 		</main>
 		<footer>
