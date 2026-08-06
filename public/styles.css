@@ -3,14 +3,36 @@
 	--primary: #77CC88;
 }
 
+html {
+	margin: 0px;
+	padding: 0px;
+}
+
 @font-face {
 	font-family: Poppins;
 	src: url("Poppins.ttf");
 }
 
+/* Main layout elements */
 body {
+	display: flex;
+	flex-direction: column;
+	min-height: 95vh;
 	font-family: Poppins, sans;
 	color: var(--off-black);
+	flex-basis: 30%;
+}
+
+/* For footer positioning */
+main {
+	flex-grow: 1;
+	flex-basis: 60%;
+}
+
+footer {
+	flex-basis: 10%;
+	font-size: 0.5em;
+	text-align: center;
 }
 
 /* Form styling */
@@ -55,6 +77,7 @@ span {
 h2 {
 	font-weight: 500;
 	font-size: 1.25em;
+	text-align: center;
 }
 
 section, header, footer {
@@ -63,10 +86,3 @@ section, header, footer {
 	align-items: center;
 }
 
-footer {
-	position: fixed;
-	width: 100%;
-	bottom: 15px;
-	font-size: 0.5em;
-	text-align: center;
-}
