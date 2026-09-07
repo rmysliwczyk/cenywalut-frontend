@@ -1,9 +1,13 @@
+window.dataLayer = window.dataLayer || [];
+
 document.addEventListener("submit", async (event) => {
 	event.preventDefault();
 
 	const formData = new FormData(event.target)
 	const waluta = formData.get('waluta')
 	const kwota = Number(formData.get('kwota'))
+
+	window.dataLayer.push({"currency" : waluta});
 
 	const response = await fetch(`https://cw-api.mysliwczykrafal.pl/currencies/${waluta}/`, {headers: {"Content-Type": "application/json"}})
 	if (response.status != 200) {
